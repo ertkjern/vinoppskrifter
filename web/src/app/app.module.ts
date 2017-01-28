@@ -7,12 +7,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component'; 
 import { FooterComponent } from './components/footer/footer.component'; 
+import { MainInfoComponent } from './components/main-info/main-info.component'
 
   @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MainInfoComponent
   ],
   imports: [
     BrowserModule,
