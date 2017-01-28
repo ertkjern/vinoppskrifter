@@ -1,0 +1,7 @@
+//just get all bootstrap stuff
+@import "bootstrap-custom"; // for customization bootstrap
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+// Core bootstrap
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";

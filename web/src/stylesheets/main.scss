@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-//partials
+// Modules and Variables
+@import "partials/base";
 
+// Vendors and external files
+@import "vendor/bootstrap-extended.scss";
+
+// Partials
 @import "partials/typography";
+@import "partials/frames";
+@import "partials/icons";
