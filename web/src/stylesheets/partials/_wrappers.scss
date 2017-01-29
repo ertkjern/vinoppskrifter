@@ -1,6 +1,6 @@
 .footer{
     background-color: #E0E0E0;
-    position: fixed;
+    position: relative;
     right: 0;
     bottom: 0;
     left: 0;
@@ -13,22 +13,44 @@
     }
 }
 
-.main-info-wrapper{
-    position: fixed;
-    margin-top: -20px;
-    max-height: auto;
-    margin-left: auto;
-    .main-info-image{
-        background-size: cover; 
-        @media screen and (max-width:480px) {
-            max-height: 40em;
-            margin-left: -20em;
-        }
-        @media screen and (max-width: $small-screen) {
-            max-height: 40em;
-            margin-left: -40em;
-        }
-    }
+// $small-screen: 320px;
+// $medium-screen: 768px;
+// $large-screen: 1200px;
 
-    
+.business-header {
+    height: 500px;
+    background: url(../images/wineGlasses.png) center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-top: -1.4em;
 }
+
+.menu-bottom-wrapper{
+    margin-top: 2em; 
+    margin-bottom: 2em;
+    .img-circle{
+        background-color: $primary-color;
+    }
+}
+
+.main-info-wrapper{
+    background-size: cover;
+    position: relative;
+    padding-left: 0; 
+    padding-right: 0;
+    margin-top: -1.4em;
+    max-height: 15%;
+    overflow: hidden;
+     @media screen and (max-width:$medium-screen) {
+             max-height: 40em;
+         }
+}
+
+.main-buttons-wrapper{
+    
+    text-align: center;
+    margin-top: 5%;
+}
+    
