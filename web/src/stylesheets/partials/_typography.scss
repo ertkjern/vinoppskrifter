@@ -3,7 +3,13 @@
     width: 100%;
     height: 250px;
 }
-.TopListHeader{
+.top-list-header{
+    font-family: $roboto-normal;
     color:white;
     text-align: center;
+}
+
+.brand-name{
+    font-family: $tangerine-normal;
+    font-size: 40px;
 }

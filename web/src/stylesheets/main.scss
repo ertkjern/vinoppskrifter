@@ -5,12 +5,14 @@
 
 // Vendors and external files
 @import "vendor/bootstrap-extended.scss";
+@import 'vendor/fonts';
 
 // Partials
 @import "partials/typography";
 @import "partials/wrappers";
 @import "partials/icons";
 @import 'partials/buttons';
+
 
 body{
     height: 100%;
