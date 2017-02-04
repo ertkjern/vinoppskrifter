@@ -1,0 +1,40 @@
+.login-wrapper{
+    margin-top: 50px;
+    height: 500px;
+
+    h2{
+        text-align: center;
+    }
+
+    .login-input{
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 40px;
+        font-size: $font-size-small; 
+        display: block;
+        width: 300px;
+        color: $primary-color-1;
+    }
+
+    .login-button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        width: 300px;
+    }
+
+    .login-error{
+        color: $primary-color-1;
+        margin-top: 5px;
+    }
+    
+}
+
+.logging-out{
+    height: 500px;
+    p{
+        text-align: center; 
+        font-size: $font-size-large; 
+    }
+}
