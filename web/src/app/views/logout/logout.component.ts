@@ -11,10 +11,9 @@ import { Router } from "@angular/router";
 export class LogoutComponent {
     constructor(public af: AngularFire, public router: Router) {
         this.af.auth.logout().then((success) => {
-            this.router.navigate(['/home']);
+            console.log("logout success");
         }).catch((error) =>{
             console.log(error);
-            this.router.navigate(['/home']);
         })
      }
 
