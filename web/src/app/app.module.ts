@@ -15,7 +15,9 @@ import { MenuBottomComponent } from './components/menu-bottom/menu-bottom.compon
 import { HomeComponent } from './views/home/home.component'
 import { LoginComponent } from './views/login/login.component'; 
 import { RegisterComponent } from './views/register/register.component'; 
-import { LogoutComponent } from './views/logout/logout.component'
+import { LogoutComponent } from './views/logout/logout.component';
+import { AboutComponent } from './views/about/about.component';
+
 
 import { MaterialModule } from '@angular/material';
 
@@ -24,6 +26,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent, data: { title: 'LoginComponent' } },
   { path: 'register', component: RegisterComponent, data: { title: 'RegisterComponent'} },
   { path: 'logout', component: LogoutComponent, data: { title: 'LogoutComponent'} },
+  { path: 'about', component: AboutComponent, data: { title: 'AboutComponent'}},
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
@@ -50,7 +53,8 @@ const myFirebaseAuthConfig = {
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    LogoutComponent
+    LogoutComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
