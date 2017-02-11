@@ -1,11 +1,14 @@
+<main-header></main-header>
 <div class="login-wrapper">
     <h2>Registerer deg:</h2>
     <p>Felter med stjerne må fylles ut.</p>
-    
-    <md-input type="email" class="login-input" type="text" placeholder="Epost"></md-input>
-    <md-input class="login-input" type="text" placeholder="Brukernavn"></md-input>
-    <md-input class="login-input" type="password" placeholder="Passord"></md-input>
-    <md-input class="login-input" type="password" placeholder="Gjenta passord"></md-input>
+    <form>
+        <md-input type="email" class="login-input" type="text" placeholder="Epost" [(ngModel)]="email" name="email"></md-input>
+        <md-input class="login-input" type="text" placeholder="Brukernavn" [(ngModel)]="username" name="username"></md-input>
+        <md-input class="login-input" type="password" placeholder="Passord" [(ngModel)]="password" name="password"></md-input>
+        <md-input class="login-input" type="password" placeholder="Gjenta passord" [(ngModel)]="repeatPassword" name="repeatPassword"></md-input>
 
-    <button class="login-button" md-raised-button>Registerer deg</button>
+        <button type="submit" (click)="register(email, username, password)" class="login-button" md-raised-button>Registerer deg</button> 
+        <p class="error">{{errorMessage}}</p>
+    </form>
 </div>

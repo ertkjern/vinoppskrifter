@@ -1,8 +1,10 @@
 <main-header></main-header>
 <div class="login-wrapper">
     <h2>Logg inn:</h2>
-    <md-input [(ngModel)]="email"class="login-input" type="text" placeholder="brukernavn"></md-input>
-    <md-input [(ngModel)]="password" class="login-input" type="password" placeholder="passord"></md-input>
-    <button (click)="login(email, password)" class="login-button" md-raised-button>Logg inn</button>
-    <p *ngIf="loginErrorMessage?.length > 0" class="login-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{loginErrorMessage}}</p>
+    <form>
+        <md-input [(ngModel)]="email" name="email" class="login-input" type="text" placeholder="Epost"></md-input>
+        <md-input [(ngModel)]="password" name="password" class="login-input" type="password" placeholder="Passord"></md-input>
+        <button (click)="login(email, password)" class="login-button" md-raised-button>Logg inn</button>
+        <p *ngIf="loginErrorMessage?.length > 0" class="login-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{loginErrorMessage}}</p>
+    </form>
 </div>
