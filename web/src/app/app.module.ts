@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes , RouterOutlet} from '@angular/router';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
@@ -17,6 +17,10 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component'; 
 import { LogoutComponent } from './views/logout/logout.component';
 import { AboutComponent } from './views/about/about.component';
+
+//services
+import { UserService } from './services/user.service'; 
+import { ValidatorService } from './services/validation.service'; 
 
 
 import { MaterialModule } from '@angular/material';
@@ -59,13 +63,17 @@ const myFirebaseAuthConfig = {
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     MaterialModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(myFirebaseConfig, myFirebaseAuthConfig)
 
   ],
-  providers: [],
+  providers: [
+    UserService,
+    ValidatorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

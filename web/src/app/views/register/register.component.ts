@@ -1,21 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValidatorService } from '../../services/validation.service'; 
 import { Router } from "@angular/router";
 import { AngularFire } from 'angularfire2';
 import * as firebase from 'firebase';
  
 
 @Component({
-    providers: [],
     selector: 'register',
     templateUrl: 'register.component.html'
 })
-export class RegisterComponent implements OnInit {
-
+export class RegisterComponent{
+    registerForm: FormGroup;
     errorMessage: string = ""; 
+    password: string = "";
 
-    constructor(private router: Router, firebase: AngularFire) { }
-
-    ngOnInit() { }
+    constructor(private router: Router, firebase: AngularFire, formBuilder: FormBuilder, validationService: ValidatorService) { 
+       this.registerForm = formBuilder.group({
+            email: ['', Validators.compose([Validators.required, validationService.emailValidator])],
+            username: ['', Validators.required],
+            password: ['', Validators.required]
+        });
+    }
 
     register(email: string, username: string, password: string){
         firebase.auth().createUserWithEmailAndPassword(email, password)

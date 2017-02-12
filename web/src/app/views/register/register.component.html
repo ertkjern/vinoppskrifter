@@ -1,14 +1,20 @@
 <main-header></main-header>
-<div class="login-wrapper">
+<div class="login-wrapper height-filler">
     <h2>Registerer deg:</h2>
     <p>Felter med stjerne må fylles ut.</p>
-    <form>
-        <md-input type="email" class="login-input" type="text" placeholder="Epost" [(ngModel)]="email" name="email"></md-input>
-        <md-input class="login-input" type="text" placeholder="Brukernavn" [(ngModel)]="username" name="username"></md-input>
-        <md-input class="login-input" type="password" placeholder="Passord" [(ngModel)]="password" name="password"></md-input>
-        <md-input class="login-input" type="password" placeholder="Gjenta passord" [(ngModel)]="repeatPassword" name="repeatPassword"></md-input>
+    <form [formGroup]="registerForm" novalidate>
+        <md-input type="email" class="login-input" type="text" placeholder="Epost" [(ngModel)]="email" name="email" [formControl]="registerForm.controls['email']" required></md-input>
+            <div class="error" *ngIf="registerForm.controls['email'].hasError('required') && registerForm.controls['email'].touched">E-post mangler.</div>
+            <div *ngIf="registerForm.controls['email'].hasError('incorrectMailFormat') && registerForm.controls['email'].touched">E-post er ikke gyldig.</div>
 
+        <md-input class="login-input" type="text" placeholder="Brukernavn" [(ngModel)]="username" name="username" [formControl]="registerForm.controls['username']" required></md-input>
+            <div class="error" *ngIf="!registerForm.controls['username'].valid && registerForm.controls['username'].touched">Brukernavn mangler.</div>
+
+        <md-input class="login-input" type="password" placeholder="Passord" [(ngModel)]="password" name="password" [formControl]="registerForm.controls['password']" required></md-input>
+            <div class="error" *ngIf="!registerForm.controls['password'].valid && registerForm.controls['password'].touched">Passord mangler.</div>
+            
         <button type="submit" (click)="register(email, username, password)" class="login-button" md-raised-button>Registerer deg</button> 
         <p class="error">{{errorMessage}}</p>
     </form>
 </div>
+

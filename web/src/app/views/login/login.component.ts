@@ -4,8 +4,6 @@ import { AngularFire } from 'angularfire2';
 import * as firebase from 'firebase';
 
 
-
-
 @Component({
     providers: [],
     selector: 'login',
