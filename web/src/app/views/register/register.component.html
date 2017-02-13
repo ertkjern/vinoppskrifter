@@ -13,7 +13,10 @@
         <md-input class="login-input" type="password" placeholder="Passord" [(ngModel)]="password" name="password" [formControl]="registerForm.controls['password']" required></md-input>
             <div class="error" *ngIf="!registerForm.controls['password'].valid && registerForm.controls['password'].touched">Passord mangler.</div>
             
-        <button type="submit" (click)="register(email, username, password)" class="login-button" md-raised-button>Registerer deg</button> 
+        <button type="submit" (click)="register(email, username, password)" class="login-button" md-raised-button [disabled]="isRegistrering">
+            <span *ngIf="!isRegistrering"> Registerer deg</span>
+            <span *ngIf="isRegistrering" class="fa fa-cog fa-spin"></span>
+        </button> 
         <p class="error">{{errorMessage}}</p>
     </form>
 </div>

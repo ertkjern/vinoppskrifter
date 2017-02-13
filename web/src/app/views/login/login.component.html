@@ -4,7 +4,10 @@
     <form>
         <md-input [(ngModel)]="email" name="email" class="login-input" type="text" placeholder="Epost"></md-input>
         <md-input [(ngModel)]="password" name="password" class="login-input" type="password" placeholder="Passord"></md-input>
-        <button (click)="login(email, password)" class="login-button" md-raised-button>Logg inn</button>
+        <button (click)="login(email, password)" class="login-button" [disabled]="isLoggingIn" md-raised-button>
+            <span *ngIf="!isLoggingIn">Logg inn</span>
+            <span *ngIf="isLoggingIn" class="fa fa-spin fa fa-cog"></span>
+        </button>
         <p *ngIf="loginErrorMessage?.length > 0" class="login-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{loginErrorMessage}}</p>
     </form>
 </div>

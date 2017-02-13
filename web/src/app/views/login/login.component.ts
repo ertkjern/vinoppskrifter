@@ -14,17 +14,20 @@ export class LoginComponent implements OnInit {
     errorMessage: string = ""; 
     username: string = ""; 
     email: string = ""; 
+    isLoggingIn: boolean = false; 
 
     constructor( private router: Router, firebase: AngularFire) { }
 
     ngOnInit() { }
     
     login(email: string, password: string) {
+        this.isLoggingIn = true; 
         firebase.auth().signInWithEmailAndPassword(email, password)
         .then((success) => {
             this.navigateHome(); 
         })
         .catch((error) => {
+            this.isLoggingIn = false; 
             //console.log("Firebase failure: " + JSON.stringify(error));
         });
 

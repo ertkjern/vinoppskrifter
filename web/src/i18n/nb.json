@@ -1,0 +1,12 @@
+{
+  "HOME": {
+    "TITLE": "Hei Angular 2!"
+  },
+  "HEADER" : {
+    "LOGIN" : "Logg inn",
+    "LOGOUT": "Logg ut", 
+    "REGISTER" : "Registrer",
+    "ABOUT" : "Om oss",
+    "TITLE" : "Vinoppskrifter"
+  }
+} 

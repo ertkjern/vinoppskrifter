@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes , RouterOutlet} from '@angular/router';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { TranslateModule } from "ng2-translate/ng2-translate";
 
 
 import { AppComponent } from './app.component';
@@ -67,8 +68,9 @@ const myFirebaseAuthConfig = {
     HttpModule,
     MaterialModule.forRoot(),
     RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(myFirebaseConfig, myFirebaseAuthConfig)
-
+    AngularFireModule.initializeApp(myFirebaseConfig, myFirebaseAuthConfig),
+    RouterModule.forRoot(appRoutes, { useHash: true }),
+    TranslateModule.forRoot()
   ],
   providers: [
     UserService,
