@@ -8,5 +8,15 @@
     "REGISTER" : "Registrer",
     "ABOUT" : "Om oss",
     "TITLE" : "Vinoppskrifter"
+  },
+  "REGISTER" : {
+    "REGISTER" : "Registerer deg",
+    "NEED_FILL" : "Felter med stjerne må fylles ut."
+  },
+  "ERROR" : {
+    "EMAIL_MISSING" : "E-post mangler.",
+    "EMAIL_NOT_VALID" : "E-post er ikke gyldig.",
+    "MISSING_USERNAME" : "Brukernavn mangler.",
+    "MISSING_PASSWORD" : "Passord mangler."
   }
 } 

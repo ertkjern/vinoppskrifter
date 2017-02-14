@@ -13,11 +13,11 @@
           <li class="dropdown">
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li *ngIf="!loggedInEmail"><a href="login" translate>HEADER.LOGIN</a></li>
-          <li *ngIf="!loggedInEmail"><a href="register" translate="">HEADER.REGISTER</a></li>
+          <li *ngIf="!loggedInEmail"><a href="#/login" translate>HEADER.LOGIN</a></li>
+          <li *ngIf="!loggedInEmail"><a href="#/register" translate="">HEADER.REGISTER</a></li>
           <li *ngIf="loggedInEmail"><a href="#">{{loggedInEmail}}</a></li>
-          <li *ngIf="loggedInEmail"><a href="logout" translate>HEADER.LOGOUT</a></li>
-          <li><a href="about" translate>HEADER.ABOUT</a></li>
+          <li *ngIf="loggedInEmail"><a href="#/logout" translate>HEADER.LOGOUT</a></li>
+          <li><a href="#/about" translate>HEADER.ABOUT</a></li>
         </ul>
       </div>
   </nav>
