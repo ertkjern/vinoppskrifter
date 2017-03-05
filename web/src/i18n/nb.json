@@ -7,7 +7,8 @@
     "LOGOUT": "Logg ut", 
     "REGISTER" : "Registrer",
     "ABOUT" : "Om oss",
-    "TITLE" : "Vinoppskrifter"
+    "TITLE" : "Vinoppskrifter",
+    "PROFILE" : "Profil"
   },
   "REGISTER" : {
     "REGISTER" : "Registerer deg",

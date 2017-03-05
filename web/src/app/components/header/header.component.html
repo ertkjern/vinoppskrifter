@@ -16,8 +16,9 @@
           <li *ngIf="!loggedInEmail"><a href="#/login" translate>HEADER.LOGIN</a></li>
           <li *ngIf="!loggedInEmail"><a href="#/register" translate="">HEADER.REGISTER</a></li>
           <li *ngIf="loggedInEmail"><a href="#">{{loggedInEmail}}</a></li>
-          <li *ngIf="loggedInEmail"><a href="#/logout" translate>HEADER.LOGOUT</a></li>
+          <li *ngIf="loggedInEmail"><a href="#" translate>HEADER.PROFILE</a></li>
           <li><a href="#/about" translate>HEADER.ABOUT</a></li>
+          <li *ngIf="loggedInEmail"><a href="#/logout" translate>HEADER.LOGOUT</a></li>
         </ul>
       </div>
   </nav>
