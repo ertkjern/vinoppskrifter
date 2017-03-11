@@ -3,6 +3,27 @@
   color: red;
 }
 
+.menu-container{
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  margin-top: 4em;
+
+  .menu-content{
+    @include roboto-font(400, 20px, black);
+    padding: 5px 10px 5px 10px;
+    margin-left: 10px;
+    border: 1px solid $primary-color-1;
+    background-color:white;
+
+    &:hover{
+      cursor: pointer;
+      background-color: $primary-color-1;
+      color: white;
+      @include slow-transition();
+    }
+  }
+}
 
 .about-article{
     margin-top: 10px;
@@ -16,7 +37,7 @@
   height: 550px;
 }
 
-/* Terrible yellow autofill color created by google 
+/* Terrible yellow autofill color created by google
  *  The following code removes the yellow color and add
  *  Belron custom styling
  *  Source: https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/

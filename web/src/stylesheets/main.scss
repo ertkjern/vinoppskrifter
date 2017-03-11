@@ -1,19 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
 // Modules and Variables
-@import "partials/base";
+@import 'partials/base';
 
 // Vendors and external files
-@import "vendor/bootstrap-extended.scss";
+@import 'vendor/bootstrap-extended';
 @import 'vendor/fonts';
+
+// Helpers
+@import 'helpers/mixins';
 
 //views
 @import 'views/login';
+@import 'views/recipe';
 
 // Partials
-@import "partials/typography";
-@import "partials/wrappers";
-@import "partials/icons";
+@import 'partials/typography';
+@import 'partials/wrappers';
+@import 'partials/icons';
 @import 'partials/buttons';
 @import 'partials/common';
 

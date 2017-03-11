@@ -6,17 +6,22 @@ import { RouterModule, Routes , RouterOutlet} from '@angular/router';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { TranslateModule } from "ng2-translate/ng2-translate";
 
+//components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainInfoComponent } from './components/main-info/main-info.component'
 import { MenuBottomComponent } from './components/menu-bottom/menu-bottom.component';
+import { RecipeMenuComponent } from './components/recipe-menu/recipe-menu.component';
+import { MyRecipesComponent } from './components/my-recipes/my-recipes.component';
 
+//views
 import { HomeComponent } from './views/home/home.component'
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { LogoutComponent } from './views/logout/logout.component';
 import { AboutComponent } from './views/about/about.component';
+import { RecipeEditorComponent } from './views/recipe-editor/recipe-editor.component';
 
 //services
 import { UserService } from './services/user.service';
@@ -31,6 +36,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent, data: { title: 'RegisterComponent'} },
   { path: 'logout', component: LogoutComponent, data: { title: 'LogoutComponent'} },
   { path: 'about', component: AboutComponent, data: { title: 'AboutComponent'}},
+  { path: 'recipe-editor', component: RecipeEditorComponent, data: { title: 'RecipeEditorComponent'}},
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
@@ -58,7 +64,10 @@ const myFirebaseAuthConfig = {
     HomeComponent,
     RegisterComponent,
     LogoutComponent,
-    AboutComponent
+    AboutComponent,
+    RecipeEditorComponent,
+    RecipeMenuComponent,
+    MyRecipesComponent
   ],
   imports: [
     BrowserModule,
