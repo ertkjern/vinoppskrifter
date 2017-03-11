@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-// Modules and Variables
-@import 'partials/base';
 
 // Vendors and external files
 @import 'vendor/bootstrap-extended';
 @import 'vendor/fonts';
+@import 'vendor/font-awesome';
 
 // Helpers
 @import 'helpers/mixins';
+@import 'helpers/variables';
 
 //views
 @import 'views/login';
@@ -20,7 +20,8 @@
 @import 'partials/icons';
 @import 'partials/buttons';
 @import 'partials/common';
-
+@import 'partials/table';
+@import 'partials/aligning';
 
 body{
     height: 100%;
