@@ -1,26 +1,53 @@
 <main-header></main-header>
 <div class="login-wrapper height-filler">
-    <h2 translate>REGISTER.REGISTER</h2>
-    <p translate>REGISTER.NEED_FILL</p>
-    <form [formGroup]="registerForm" novalidate>
-        <md-input type="email" class="login-input" type="text" placeholder="Epost" [(ngModel)]="email" name="email" [formControl]="registerForm.controls['email']" required></md-input>
-            <div class="error" *ngIf="registerForm.controls['email'].hasError('required') && registerForm.controls['email'].touched" translate>ERROR.EMAIL_MISSING</div>
-            <div *ngIf="registerForm.controls['email'].hasError('incorrectMailFormat') && registerForm.controls['email'].touched" translate>ERROR.EMAIL_NOT_VALID</div>
+  <h2 translate>REGISTER.REGISTER</h2>
+  <p translate>REGISTER.NEED_FILL</p>
+  <form [formGroup]="registerForm" novalidate>
+    <md-input-container class="login-input">
+      <input mdInput type="email" type="text" placeholder="Epost" [(ngModel)]="email" name="email"
+             [formControl]="registerForm.controls['email']" required>
+    </md-input-container>
+    <div class="error"
+         *ngIf="registerForm.controls['email'].hasError('required') && registerForm.controls['email'].touched"
+         translate>ERROR.EMAIL_MISSING
+    </div>
+    <div
+      *ngIf="registerForm.controls['email'].hasError('incorrectMailFormat') && registerForm.controls['email'].touched"
+      translate>ERROR.EMAIL_NOT_VALID
+    </div>
 
-        <md-input class="login-input" type="text" placeholder="Brukernavn" [(ngModel)]="username" name="username" [formControl]="registerForm.controls['username']" required></md-input>
-            <div class="error" *ngIf="!registerForm.controls['username'].valid && registerForm.controls['username'].touched" translate>ERROR.MISSING_USERNAME</div>
+    <md-input-container class="login-input">
+      <input mdInput type="text" placeholder="Brukernavn" [(ngModel)]="username" name="username"
+             [formControl]="registerForm.controls['username']" required>
+    </md-input-container>
+    <div class="error" *ngIf="!registerForm.controls['username'].valid && registerForm.controls['username'].touched"
+         translate>ERROR.MISSING_USERNAME
+    </div>
 
-        <md-input class="login-input" type="text" placeholder="Fornavn" [(ngModel)]="firstname" name="firstname" [formControl]="registerForm.controls['firstname']"></md-input>
-        <md-input class="login-input" type="text" placeholder="Etternavn" [(ngModel)]="lastname" name="lastname" [formControl]="registerForm.controls['lastname']"></md-input>
+    <md-input-container class="login-input">
+      <input mdInput type="text" placeholder="Fornavn" [(ngModel)]="firstname" name="firstname"
+             [formControl]="registerForm.controls['firstname']">
+    </md-input-container>
 
-        <md-input class="login-input" type="password" placeholder="Passord" [(ngModel)]="password" name="password" [formControl]="registerForm.controls['password']" required></md-input>
-            <div class="error" *ngIf="!registerForm.controls['password'].valid && registerForm.controls['password'].touched" translate>ERROR.MISSING_PASSWORD</div>
-            
-        <button type="submit" (click)="register(email, username,  firstname, lastname, password)" class="login-button" md-raised-button [disabled]="isRegistrering">
-            <span *ngIf="!isRegistrering" translate>REGISTER.REGISTER</span>
-            <span *ngIf="isRegistrering" class="fa fa-cog fa-spin"></span>
-        </button> 
-        <p class="error">{{errorMessage}}</p>
-    </form>
+    <md-input-container class="login-input">
+      <input mdInput type="text" placeholder="Etternavn" [(ngModel)]="lastname" name="lastname"
+             [formControl]="registerForm.controls['lastname']">
+    </md-input-container>
+
+    <md-input-container class="login-input">
+      <input mdInput type="password" placeholder="Passord" [(ngModel)]="password" name="password"
+             [formControl]="registerForm.controls['password']" required>
+    </md-input-container>
+    <div class="error" *ngIf="!registerForm.controls['password'].valid && registerForm.controls['password'].touched"
+         translate>ERROR.MISSING_PASSWORD
+    </div>
+
+    <button type="submit" (click)="register(email, username,  firstname, lastname, password)" class="login-button"
+            md-raised-button [disabled]="isRegistrering">
+      <span *ngIf="!isRegistrering" translate>REGISTER.REGISTER</span>
+      <span *ngIf="isRegistrering" class="fa fa-cog fa-spin"></span>
+    </button>
+    <p class="error">{{errorMessage}}</p>
+  </form>
 </div>
 

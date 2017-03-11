@@ -6,22 +6,21 @@ import { RouterModule, Routes , RouterOutlet} from '@angular/router';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { TranslateModule } from "ng2-translate/ng2-translate";
 
-
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component'; 
-import { FooterComponent } from './components/footer/footer.component'; 
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { MainInfoComponent } from './components/main-info/main-info.component'
 import { MenuBottomComponent } from './components/menu-bottom/menu-bottom.component';
 
 import { HomeComponent } from './views/home/home.component'
-import { LoginComponent } from './views/login/login.component'; 
-import { RegisterComponent } from './views/register/register.component'; 
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 import { LogoutComponent } from './views/logout/logout.component';
 import { AboutComponent } from './views/about/about.component';
 
 //services
-import { UserService } from './services/user.service'; 
-import { ValidatorService } from './services/validation.service'; 
+import { UserService } from './services/user.service';
+import { ValidatorService } from './services/validation.service';
 
 
 import { MaterialModule } from '@angular/material';
@@ -46,7 +45,7 @@ const myFirebaseConfig = {
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Google,
   method: AuthMethods.Redirect
-};  
+};
 
   @NgModule({
   declarations: [
@@ -66,7 +65,7 @@ const myFirebaseAuthConfig = {
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(myFirebaseConfig, myFirebaseAuthConfig),
     RouterModule.forRoot(appRoutes, { useHash: true }),
