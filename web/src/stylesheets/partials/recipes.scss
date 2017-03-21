@@ -1,0 +1,42 @@
+.recipe{
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+  margin-top: 35px;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 15px 15px 15px 15px;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  .title{
+    @include roboto-font(400, 18px, black);
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: bold;
+  }
+  .percentage{
+
+  }
+  .short-desc{
+    @include roboto-font(400, 14px, black);
+    margin-top: 35px;
+  }
+  .more-info{
+    position: absolute;
+    bottom: 0;
+    margin-left: 20%;
+    font-weight: bold;
+  }
+  &:hover{
+    @include standard-transition();
+    cursor: pointer;
+    background-color: #e6e6e6;
+  }
+}
+
+.recipe-search-bar{
+  margin: auto;
+  width: 50%;
+
+  input{
+    width: 100%;
+  }
+}

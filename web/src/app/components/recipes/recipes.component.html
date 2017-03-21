@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row recipe-search-bar">
+    <div class="form-group col-md-12">
+      <input placeholder="Søk i mine oppskrifter..." type="text" class="form-control" id="search-input">
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let recipe of recipesTestData">
+      <div class="recipe col-md-3">
+        <p class="title">{{recipe.title}} {{recipe.percentage}}%</p>
+        <p class="short-desc">{{recipe.shortDesc}}</p>
+        <p class="more-info">Klikk for mer info</p>
+      </div>
+    </div>
+  </div>
+</div>

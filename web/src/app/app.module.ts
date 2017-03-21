@@ -14,6 +14,7 @@ import { MainInfoComponent } from './components/main-info/main-info.component'
 import { MenuBottomComponent } from './components/menu-bottom/menu-bottom.component';
 import { RecipeMenuComponent } from './components/recipe-menu/recipe-menu.component';
 import { MyRecipesComponent } from './components/my-recipes/my-recipes.component';
+import { RecipesComponent } from './components/recipes/recipes.component';
 
 //views
 import { HomeComponent } from './views/home/home.component'
@@ -67,7 +68,8 @@ const myFirebaseAuthConfig = {
     AboutComponent,
     RecipeEditorComponent,
     RecipeMenuComponent,
-    MyRecipesComponent
+    MyRecipesComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
